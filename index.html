@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ModelXpert</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>ModelXpert</h1>
+    <p>No-Code AI/ML Platform</p>
+
+    <!-- File Upload -->
+    <div class="upload-section">
+      <h2>Upload Dataset</h2>
+      <input type="file" id="dataset" accept=".csv">
+      <button id="uploadBtn">Upload</button>
+    </div>
+
+    <!-- Preprocessing Options -->
+    <div class="preprocessing-section">
+      <h2>Preprocessing</h2>
+      <label for="missingValues">Handle Missing Values:</label>
+      <select id="missingValues">
+        <option value="mean">Mean</option>
+        <option value="median">Median</option>
+        <option value="mode">Mode</option>
+      </select>
+      <button id="preprocessBtn">Preprocess Data</button>
+    </div>
+
+    <!-- Model Training -->
+    <div class="training-section">
+      <h2>Train Model</h2>
+      <label for="modelType">Select Model:</label>
+      <select id="modelType">
+        <option value="random_forest">Random Forest</option>
+        <option value="svm">SVM</option>
+        <option value="neural_network">Neural Network</option>
+      </select>
+      <button id="trainBtn">Train Model</button>
+    </div>
+
+    <!-- Results -->
+    <div class="results-section">
+      <h2>Results</h2>
+      <div id="results"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
